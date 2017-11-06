@@ -69,6 +69,17 @@ update_status ModuleCamera3D::Update()
 	// TODO 5: Make the camera go left (a) and right with (d)
 	// Note that the vectors X/Y/Z contain the current axis of the camera
 	// you can read them to modify Position
+
+	if (App->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT)
+	{
+		Position.x -= 0.01f;
+		Reference.x -= 0.01f;
+	}
+	if (App->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT)
+	{
+		Position.x += 0.01f;
+		Reference.x += 0.01f;
+	}
 	
 	// Mouse motion ----------------
 	if(App->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_REPEAT)
