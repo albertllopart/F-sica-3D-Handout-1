@@ -88,6 +88,20 @@ update_status ModuleCamera3D::Update()
 		int dy = -App->input->GetMouseYMotion();
 
 		// TODO (Homework): Rotate the camera with the mouse
+		if (dx != 0)
+		{
+			float deltaX = (float)dx * 0.2f;
+
+			X = rotate(X, deltaX, vec3(0.0f, 1.0f, 0.0f));
+			Y = rotate(Y, deltaX, vec3(0.0f, 1.0f, 0.0f));
+			Z = rotate(Z, deltaX, vec3(0.0f, 1.0f, 0.0f));
+		}
+		/*if (dy != 0)
+		{
+			float deltaY = (float)dy * 0.2f;
+
+
+		}*/
 	}
 
 	// Recalculate matrix -------------
