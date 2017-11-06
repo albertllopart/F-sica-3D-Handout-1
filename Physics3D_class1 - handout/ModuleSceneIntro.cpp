@@ -20,6 +20,9 @@ bool ModuleSceneIntro::Start()
 	// experiment with different camera placements, then use LookAt()
 	// to make it look at the center
 
+	App->camera->Position.y += 1;
+	App->camera->LookAt({ 0, 0, 0 });
+
 	return ret;
 }
 
