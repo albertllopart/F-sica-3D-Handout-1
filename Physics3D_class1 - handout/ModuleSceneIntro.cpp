@@ -48,6 +48,27 @@ update_status ModuleSceneIntro::Update()
 	// TODO 6: Draw a sphere of 0.5f radius around the center
 	// Draw somewhere else a cube and a cylinder in wireframe
 
+	Sphere sphere;
+	sphere.axis = true;
+	sphere.radius = 0.5f;
+	sphere.InnerRender();
+
+	Cube cube;
+	cube.axis = true;
+	cube.wire = true;
+	cube.size = { 1, 1, 1 };
+	cube.SetPos(2, 0, 0);
+	cube.Render();
+
+	Cylinder cylinder;
+	cylinder.axis = true;
+	cylinder.wire = true;
+	cylinder.radius = 0.5f;
+	cylinder.height = 1;
+	cylinder.SetPos(-2, 0, 0);
+	cylinder.SetRotation(45, { 0, 0, 1 });
+	cylinder.Render();
+
 	return UPDATE_CONTINUE;
 }
 
