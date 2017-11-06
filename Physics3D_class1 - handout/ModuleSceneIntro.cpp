@@ -37,6 +37,10 @@ update_status ModuleSceneIntro::Update()
 	// TODO 1: Create a Plane primitive. This uses the plane formula
 	// so you have to express the normal of the plane to create 
 	// a plane centered around 0,0. Make that it draw the axis for reference
+	
+	Plane plane;
+	plane.axis = true;
+	plane.Render();
 
 	// TODO 6: Draw a sphere of 0.5f radius around the center
 	// Draw somewhere else a cube and a cylinder in wireframe
